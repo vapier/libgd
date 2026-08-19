@@ -61,6 +61,7 @@ jobs:
 
     - uses: vapier/coverity-scan-action@v1
       with:
+        project: libgd/libgd
         email: ${{ secrets.COVERITY_SCAN_EMAIL }}
         token: ${{ secrets.COVERITY_SCAN_TOKEN }}
         command: cmake --build ${{github.workspace}}/build --config ${BUILD_TYPE} --parallel 4
